@@ -11,9 +11,9 @@ from bokeh.models.widgets import Div
 #with open("style.css") as f:
 #  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-if st.button('Go to Streamlit'):
-  js = "window.open('https://www.streamlit.io/')"  # New tab or window
-  js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
+if st.button('Voltar a página principal'):
+  js = "window.open('https://copadomundofifa.herokuapp.com/')"  # New tab or window
+  js = "window.location.href = 'https://copadomundofifa.herokuapp.com/'"  # Current tab
   html = '<img src onerror="{}">'.format(js)
   div = Div(text=html)
   st.bokeh_chart(div)
