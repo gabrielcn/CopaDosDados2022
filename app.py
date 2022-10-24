@@ -12,7 +12,7 @@ from bokeh.models.widgets import Div
 #  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 if st.button('Voltar a página principal'):
-  js = "window.open('')"  # New tab or window
+  #js = "window.open('https://copadomundofifa.herokuapp.com/')"  # New tab or window
   js = "window.location.href = 'https://copadomundofifa.herokuapp.com/'"  # Current tab
   html = '<img src onerror="{}">'.format(js)
   div = Div(text=html)
