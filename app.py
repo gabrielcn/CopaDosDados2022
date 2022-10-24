@@ -18,7 +18,7 @@ if st.button('Voltar a página principal'):
   div = Div(text=html)
   st.bokeh_chart(div)
 
-  st.markdown("[https://copadomundofifa.herokuapp.com/]")
+st.markdown("[https://copadomundofifa.herokuapp.com/]")
 
 def add_bg_from_url():
     st.markdown(
