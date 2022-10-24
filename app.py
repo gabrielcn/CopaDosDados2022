@@ -3,17 +3,9 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 import joblib
-from streamlit_option_menu import option_menu
 
 #image = Image.open("copadosdados-main/logo.png")
 #st.image(image)
-
-with st.sidebar:
-    selected = option_menu("Main Menu", ["Home", 'Settings'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=1)
-    selected
-
-
 
 with open("style.css") as f:
   st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
