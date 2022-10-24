@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 import joblib
-import webbrowser
+from bokeh.models.widgets import Div
 
 #image = Image.open("copadosdados-main/logo.png")
 #st.image(image)
@@ -11,10 +11,12 @@ import webbrowser
 #with open("style.css") as f:
 #  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-url = 'https://copadomundofifa.herokuapp.com/'
-
-if st.button('Voltar a página principal'):
-    webbrowser.open_new_tab(url)
+if st.button('Go to Streamlit'):
+  js = "window.open('https://www.streamlit.io/')"  # New tab or window
+  js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
+  html = '<img src onerror="{}">'.format(js)
+  div = Div(text=html)
+  st.bokeh_chart(div)
 
 def add_bg_from_url():
     st.markdown(
