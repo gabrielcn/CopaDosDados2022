@@ -3,6 +3,7 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 import joblib
+import webbrowser
 
 #image = Image.open("copadosdados-main/logo.png")
 #st.image(image)
@@ -10,9 +11,10 @@ import joblib
 #with open("style.css") as f:
 #  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.markdown("[Menu](https://www.google.com.br/)")
+url = 'https://copadomundofifa.herokuapp.com/'
 
-st.button("teste")
+if st.button('Voltar a página principal'):
+    webbrowser.open_new_tab(url)
 
 def add_bg_from_url():
     st.markdown(
