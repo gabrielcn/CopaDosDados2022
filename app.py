@@ -26,8 +26,6 @@ def add_bg_from_url():
          <style>
          .stApp {{
              background-color: #F5F5DC;
-             background-attachment: fixed;
-             background-size: cover
          }}
          </style>
          """,
