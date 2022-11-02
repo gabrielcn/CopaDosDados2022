@@ -37,7 +37,7 @@ def add_bg_from_url():
 #add_bg_from_url() 
 
 st.title("Copa do Mundo da FIFA 2022")
-st.text("Algoritmo de Machine Learning para realizar predição de jogos da Copa do Mundo 2022")
+st.text("Algoritmo de Machine Learning para realizar predições de jogos da Copa do Mundo 2022")
 
 df_selecoes = pd.read_csv("Selecoes2022.csv")
 
