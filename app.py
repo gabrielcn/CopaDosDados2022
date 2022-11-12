@@ -4,6 +4,9 @@ from PIL import Image
 import numpy as np
 import joblib
 from bokeh.models.widgets import Div
+import streamlit.components.v1 as components
+import webbrowser
+
 
 #image = Image.open("copadosdados-main/logo.png")
 #st.image(image)
@@ -11,31 +14,32 @@ from bokeh.models.widgets import Div
 #with open("style.css") as f:
 #  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-if st.button('Voltar a página principal'):
-  js = "window.open('https://copadomundofifa.herokuapp.com/')"  # New tab or window
-  js = "window.location.href = 'https://copadomundofifa.herokuapp.com/'"  # Current tab
-  html = '<img src onerror="{}">'.format(js)
-  div = Div(text=html)
-  st.bokeh_chart(div)
+url = 'https:copadomundofifa.herokuapp.com'
 
-st.markdown("[https://copadomundofifa.herokuapp.com/]")
+if st.button('Página Inicial'):
+    webbrowser.open_new(url)
+
 
 def add_bg_from_url():
     st.markdown(
          f"""
          <style>
          .stApp {{
-             background-color: #F5F5DC;
+             background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/3207377-futebol-padrao-para-banner-campeonato-de-futebol-2022-no-qatar-gratis-vetor.jpg");
+             background-attachment: fixed;
+             background-size: cover;
+             opacity: 0.8;
          }}
          </style>
          """,
          unsafe_allow_html=True
      )
-     
-#add_bg_from_url() 
+
+add_bg_from_url()
+
 
 st.title("Copa do Mundo da FIFA 2022")
-st.text("Algoritmo de Machine Learning para realizar predições de jogos da Copa do Mundo 2022")
+st.text("Algoritmo de Machine Learning capaz de prever quem vai ganhar a Copa do Mundo 2022")
 
 df_selecoes = pd.read_csv("Selecoes2022.csv")
 
