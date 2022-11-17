@@ -7,7 +7,6 @@ from bokeh.models.widgets import Div
 import streamlit.components.v1 as components
 import webbrowser
 
-
 #image = Image.open("copadosdados-main/logo.png")
 #st.image(image)
 
