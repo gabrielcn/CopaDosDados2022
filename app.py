@@ -7,18 +7,16 @@ from bokeh.models.widgets import Div
 import streamlit.components.v1 as components
 import webbrowser
 
-
 #image = Image.open("copadosdados-main/logo.png")
 #st.image(image)
 
 #with open("style.css") as f:
 #  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-url = 'https:copadomundofifa.herokuapp.com'
+url = 'https://copadomundofifa.herokuapp.com'
 
 if st.button('Página Inicial'):
-    webbrowser.open_new(url)
-
+    webbrowser.open_new_tab(url)
 
 def add_bg_from_url():
     st.markdown(
@@ -38,8 +36,9 @@ def add_bg_from_url():
 add_bg_from_url()
 
 
-st.title("Copa do Mundo da FIFA 2022")
-st.text("Algoritmo de Machine Learning capaz de prever quem vai ganhar a Copa do Mundo 2022")
+st.markdown("<h1 style='color:#fff;'> Copa do Mundo da FIFA 2022 </h1>", unsafe_allow_html=True)
+
+st.markdown("<p style='color:#fff;'>Algoritmo de Machine Learning capaz de predizer confrontos da Copa do Mundo no Qatar</p>", unsafe_allow_html=True)
 
 df_selecoes = pd.read_csv("Selecoes2022.csv")
 
